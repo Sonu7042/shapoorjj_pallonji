@@ -43,7 +43,15 @@ Location:
 html, body {
   overflow-x: hidden;
 }
+@font-face {
+  font-family: heading;
+  src: url(fonts/OpenSauceSans-Regular.ttf);
+}
 
+
+h1{
+  font-family: heading;
+}
 a, a:hover {
   text-decoration: none;
 }
@@ -623,8 +631,16 @@ img {
   --ztc-weight-semibold: 600;
   --ztc-weight-bold: 700;
   --ztc-weight-black: 800;
-  --ztc-family-font1: 'Nunito Sans', serif;
-  --ztc-family-font2: 'Quicksand', sans-serif;
+  /* --ztc-family-font1: 'Nunito Sans', serif; */
+  /* --ztc-family-font2: 'Quicksand', sans-serif; */
+  --ztc-family-font1: 'Freight';
+  --ztc-family-font2: 'Optima';
+}
+
+
+.gggg{
+  font-family: 'Freight';
+  text-transform: capitalize !important;
 }
 
 /*
@@ -11562,4 +11578,147 @@ section.vl-testimonial4.vl-testimonial-inner.testimonial2.sp2 .smarrow.abarow.ar
     width: 200px;
     height: 200px;
     object-fit: contain;
+}
+
+
+
+/* pop css form  */
+/* === Floating Enquiry Button === */
+
+
+.enquiry-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+/* === Popup Background === */
+.enquiry-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* === Form Container === */
+.enquiry-form-container {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 450px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* === Close Button === */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 26px;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.close-btn:hover {
+  color: #007bff;
+}
+
+/* === Form Styles === */
+.enquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.enquiry-form input,
+.enquiry-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.enquiry-form input:focus,
+.enquiry-form textarea:focus {
+  border-color: #007bff;
+}
+
+.enquiry-form textarea {
+  min-height: 100px;
+  resize: none;
+}
+
+.submit-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* === Animation === */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* === Responsive === */
+@media (max-width: 500px) {
+  .enquiry-btn {
+    padding: 12px 22px;
+    font-size: 14px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .enquiry-form-container {
+    padding: 25px 25px;
+  }
+}
+
+
+
+
+.enquiry-btn {
+    position: fixed;
+    top: 50%;
+    right: -3px;
+    background-color: #0188ce;
+    color: #fff;
+    border: none;
+    padding: 14px 28px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s 
+ease;
 }
